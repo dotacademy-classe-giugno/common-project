@@ -24,11 +24,14 @@ public class EmployeeConverter extends APersonConverter<Employee> {
 			String job = stringTokenizer.nextToken();
 			instance.setJob(job);
 			
-//			String smartphon = stringTokenizer.nextToken();
-//			instance.setSmartphoneKind(smartphon);
+		    String smartphon = stringTokenizer.nextToken();
+		    instance.setSmartphoneKind(smartphon);
 
 			String id = stringTokenizer.nextToken();
 			instance.setId(id);
+			
+			String skill = stringTokenizer.nextToken();
+			instance.setSkill(skill);
 			
 		}
 		return instance;
@@ -42,8 +45,9 @@ public class EmployeeConverter extends APersonConverter<Employee> {
 				","+instance.getLastname()+
 				","+instance.getAge()+
 				","+instance.getJob()+
-//				","+instance.getSmartphoneKind()+
-				","+instance.getId();
+				","+instance.getSmartphoneKind()+
+				","+instance.getId()+
+				","+instance.getSkill();
 		
 		return result;
 	}
